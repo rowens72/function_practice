@@ -20,6 +20,22 @@ def eat_lunch(mylist):
             else:
                print(f"Next I eat {mylist[i]}")
 
+# adding another function as a bonus with a while loop, I want to the same type of functionality as above.
+def eat_dinner(dinner):
+    i = 0
+    if len(dinner) == 0:
+        print("My dinner plate is empty!")
+        
+    while len(dinner) > 0:
+        if i == 0:
+            print(f"for diner first I eat {dinner[0]}")
+        else:
+            print(f"Next for dinner I eat {dinner[i]}")
+        i = i + 1
+        # when the index reach the number of len(dinner) then break from loop else you will get an error
+        if i == len(dinner):
+            break
+
 # call functions above
 
 #function one: 
@@ -32,3 +48,7 @@ print(pack('arg1', 'arg2', 'arg3'))
 eat_lunch(["Pizza"])
 eat_lunch(["eggs","banana","burger","ice cream", "Fries", "hot Dog"])
 eat_lunch([])
+
+# run dinner function
+eat_dinner(['Lobster', 'Maui Maui', 'BlueFin'])
+eat_dinner([]) 
